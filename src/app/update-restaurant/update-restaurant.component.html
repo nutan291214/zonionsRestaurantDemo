@@ -1,0 +1,46 @@
+<div class="container jumbotron">
+    <h1 style="text-align: center;" class="display-1">Zonions</h1>
+    <button class="btn btn-primary" (click)="backEvent()" style="float: right; margin-bottom: 10px;">Back</button>
+    <h2>Restaurant</h2>
+        <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label><b>Restaurant Name</b></label>
+            <input type="text" placeholder="Enter restaurant name" required name="restoName"[(ngModel)]="resto.restaurantName" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label><b>Address</b></label>
+            <textarea placeholder="enter address" class="form-control" name="Address" [(ngModel)]="resto.address"></textarea>
+        </div>
+        <div class="form-group">
+            <label><b>Phone No.</b></label>
+            <input type="text" placeholder="Enter phone no." name="phone"class="form-control" [(ngModel)]="resto.phone_no">
+        </div>
+        <div class="form-group">
+            <label><b>Open Time</b></label>
+            <timepicker  name="openTime" [(ngModel)]="resto.open_time"></timepicker>
+        </div>
+        <div class="form-group">
+            <label><b>Closing Time</b></label>
+            <timepicker  name="closeTime" [(ngModel)]="resto.close_time"></timepicker>
+        </div>
+        <!-- <div class="form-group">
+            <input type="file" name="image"  />
+        </div> -->
+        <div class="form-group">
+            <label><b>Last Updated Date</b></label>
+            <input type="date" placeholder="Enter last updated date" [(ngModel)]="resto.updated_date" name="updatedDate"class="form-control"/> 
+        </div>
+        <!-- <div>
+            <input type="file" [(ngModel)]="resto.name" name="imageName"/>
+        </div> -->
+        <div>
+            <img [src]="url" height="100px" width="100px"/> &nbsp;
+            <input type="file" name="imageName" (change)="onChange($event)" style="width: 210px;"/>
+            <button type="button" class="btn btn-primary" (click)="updateImage()">Update image</button>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+    <br/>
+   
+</div>

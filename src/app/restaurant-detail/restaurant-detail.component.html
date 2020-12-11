@@ -1,0 +1,22 @@
+<div class="container">
+        <table class="table striped">
+            <thead>
+                <th>Restaurant Name</th>
+                <th>Restaurant Address</th>
+                <th>Phone Number</th>
+                <th>Open Time</th>
+                <th>Close time</th>
+                <th>Menu Image</th>
+            </thead>
+            <tbody>
+                <tr>
+                        <td>{{restaurantList.restaurantName}}</td>
+                        <td>{{restaurantList.address}}</td>
+                        <td>{{restaurantList.phone_no}}</td>
+                        <td>{{restaurantList.open_time | date:'shortTime'}}</td>
+                        <td>{{restaurantList.close_time| date:'shortTime'}}</td>
+                        <td><img [src]="url" style="height: 200px; width: 200px;"/></td>
+                </tr>
+            </tbody>
+        </table>
+</div>
